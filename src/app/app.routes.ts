@@ -6,9 +6,16 @@ export const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full'
   },
+
   {
     path: 'login',
     loadComponent: () =>
-      import('./pages/login/login.page').then(m => m.LoginPage)
+      import('./pages/login/login.page').then(m => m.LoginPage),
+  },
+
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./home/home.page').then(m => m.HomePage),
   }
 ];
